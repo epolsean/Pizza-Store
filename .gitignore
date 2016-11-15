@@ -1,0 +1,9 @@
+# file extension
+*.config
+
+# file name
+[Cc]onfig.json
+
+# folder
+/[Bb]in
+
