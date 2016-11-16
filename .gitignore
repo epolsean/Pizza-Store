@@ -1,9 +1,11 @@
-# file extension
-*.config
+### file extension
+#*.config
 
-# file name
-[Cc]onfig.json
+#### file name
+#[Aa]pp.json
+#[Cc]onfig.json
 
-# folder
-/[Bb]in
+### folder name
+#[Bb]in/
+#[Dd]ebug/
 
