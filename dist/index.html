@@ -10,51 +10,95 @@
 
         <title>Pizza Store</title>
 
-        <link rel="stylesheet" href="cdn/bootstrap">
         <link rel="stylesheet" href="style/main.css">
-
-        <!--<script async="async" defer="defer"/>-->
     </head>
 
-    <body>
-        <header>
-            <h1>Pizza Store</h1>
+    <body class="container-fluid" data-ng-app="pizzaApp">
+        <header class="row">
+            <h1 class="col-sm-12">Pizza Store</h1>
         </header>
 
-        <nav></nav>
+        <nav class="row"></nav>
 
-        <main>
-            <section>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+        <main class="row">
+            <section class="col-sm-12">
+                <ul class="list-unstyled row">
+                    <li class="col-sm-4">
+                        <figure>
+                            <img src="image/pizza1.jpg" alt="meat pizza" class="img-responsive img-circle"/>
+                            <figcaption>Meat Pizza</figcaption>
+                        </figure>
+                    </li>
+                    <li class="col-sm-4">
+                        <figure>
+                            <img src="image/pizza2.jpg" alt="vegetable pizza" class="img-responsive img-circle"/>
+                            <figcaption>Veggie Pizza</figcaption>
+                        </figure></li>
+                    <li class="col-sm-4">
+                        <figure>
+                            <img src="image/pizza3.jpg" alt="custom pizza" class="img-responsive img-circle"/>
+                            <figcaption>Custom Pizza</figcaption>
+                        </figure></li>
+                    </ul>
             </section>
 
-            <div></div>
-        </main>
+            <div data-ng-view></div>
 
-        <aside></aside>
-            <header>Coupons</header>
-            <ul>
-                <li>10% Off</li>
-                <li>Buy 2 Medium Any Toppings, Get 1 Small Cheese Free</li>
-                <li>Buy 3 Large Any Toppings, Get 1 Large Cheese Free</li>
-            </ul>
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="">Sitemap</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">Facebook</a></li>
+            <div class="col-sm-9">
+                <form action="">
+                    <label for="crust">Crust: </label>
+                    <select name="crust" id="crust">
+                        <option value="0">Select a Crust</option>
+                        <option value="1">Pan</option>
+                        <option value="2">Stuffed Crust</option>
+                    </select>
+                    </br>
+                    <label for="sauce">Sauce: </label>
+                    <select name="sauce" id="sauce">
+                        <option value="0">Select a Sauce</option>
+                        <option value="1">Tomato</option>
+                        <option value="2">Marinara</option>
+                    </select>
+                    </br>
+                    <button type="reset" class="btn btn-danger">Cancel Order</button>
+                    <button type="button" class="btn btn-success">Place Order</button>
+                </form>
+            </div>
+
+            <aside class="col-sm-3">
+                <header>Coupons</header>
+                <ul class="list-unstyled">
+                    <li>10% Off</li>
+                    <li>Buy 2 Medium Any Toppings, Get 1 Small Cheese Free</li>
+                    <li>Buy 3 Large Any Toppings, Get 1 Large Cheese Free</li>
                 </ul>
-            </nav>
+            </aside>
+        </main>
+            
+        <footer class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <nav class="col-sm-12"> 
+                        <ul class="list-unstyled row">
+                            <li class="col-sm-3"><a href="">Sitemap</a></li>
+                            <li class="col-sm-3"><a href="">Contact Us</a></li>
+                            <li class="col-sm-3"><a href="">Twitter</a></li>
+                            <li class="col-sm-3"><a href="">Facebook</a></li>
+                        </ul>
+                    </nav>
 
-            <samll>Copyright $copy; 2016, Erik Polsean. All Rights Reserved.</samll>
+                    <samll class="col-sm-12" style="text-align: center">Copyright &copy; 2016, Erik Polsean. All Rights Reserved.</samll>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
         <script src="script/app.js"></script>
+        <script src="module/home/controller.js"></script>
+        <script src="module/home/service.js"></script>
+        <script src="script/util.js"></script>
     </body>
 </html>
